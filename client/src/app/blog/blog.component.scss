@@ -1,0 +1,218 @@
+@import "../scss/abstract/mixins";
+.blog {
+  padding: 0 1rem;
+  & > * {
+    margin-bottom: 5rem;
+  }
+  &__poster {
+    width: 100%;
+    height: 90vh;
+    position: relative;
+    & > img {
+      width: 100%;
+      height: 100%;
+    }
+    &__content {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      background-color: white;
+      bottom: 0;
+      width: 45%;
+      padding: 2vmax;
+      padding-bottom: 1vmax;
+      font-family: poppins;
+      color: black;
+      transform: translateX(-50%);
+      & > div {
+        position: absolute;
+        left: 0;
+        padding: 0.5rem;
+        font-size: 1.6vmax;
+        font-weight: bold;
+        top: -20%;
+        background-color: black;
+        color: white;
+      }
+      & > *:not(:last-child) {
+        margin-bottom: 1.5rem;
+      }
+      & > h2 {
+        font-size: 2vmax;
+        font-weight: 500;
+        transition: 0.2s all;
+        &:hover {
+          border-bottom: 2px solid white;
+        }
+      }
+      & > p {
+        font-size: 1.2vmax;
+      }
+      & > span {
+        font-size: 1.2vmax;
+        display: inline-block;
+        padding-bottom: 0.2rem;
+        padding-top: 1.5rem;
+        letter-spacing: 1px;
+        border-top: 3px solid black;
+        transition: 0.2s all;
+        &:hover {
+          color: whitesmoke;
+          transform: translateX(4px);
+        }
+      }
+    }
+  }
+  &__content {
+    padding: 0rem 20vw;
+    font-family: poppins;
+    margin: auto;
+    color: #555;
+    font-size: 1.2vmax;
+    line-break: auto;
+    word-spacing: 3px;
+    line-height: 2.25vmax;
+    @include respond(phone) {
+      padding: 0 5rem;
+      font-size: 0.9rem;
+    }
+  }
+  &__user {
+    width: 80%;
+    padding: 2rem;
+    display: flex;
+    margin: auto;
+    background-color: whitesmoke;
+    &__image {
+      width: 11vmax;
+
+      margin: 1rem 2vmax;
+    }
+    &__details {
+      font-family: catamaran, hind_vadodara, Helvetica, Roboto, Arial,
+        sans-serif;
+      width: 80%;
+      & > * {
+        margin-bottom: 1rem;
+      }
+      & > h2 {
+        font-family: hind_vadodara, Helvetica, Roboto, Arial, sans-serif;
+
+        font-weight: normal;
+        font-size: 2.3vmax;
+        color: blac;
+        text-transform: capitalize;
+      }
+      & > p {
+        line-break: auto;
+        font-size: 1.2vmax;
+        word-spacing: 3px;
+        // font
+      }
+      & > span {
+        padding-right: 0.5rem;
+        padding-bottom: 0.2rem;
+        display: inline-block;
+        border-bottom: 2px solid black;
+        font-size: 1rem;
+        line-height: 2;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+    }
+  }
+  &__addComment {
+    width: 60%;
+
+    margin: auto;
+    font-family: poppins;
+    & > * {
+      margin-bottom: 1rem;
+    }
+    
+    & > h2 {
+      font-weight: 400;
+      text-transform: uppercase;
+      font-size: 1.8vmax;
+      font-family: hind_vadodara, Helvetica, Roboto, Arial, sans-serif;
+      color: #000;
+      text-align: center;
+    }
+
+    & > textarea {
+      width: 100%;
+      padding: 2rem;
+      border: 1px solid silver;
+      font-size: 1.4vmax;
+
+      &::placeholder {
+        font-size: 1.4vmax;
+        color: #555;
+      }
+      &:focus-visible {
+        outline: none;
+      }
+    }
+    & > button {
+      display: block;
+      margin: auto;
+      border: none;
+      outline: none;
+      font-size: 1.5vmax;
+      padding: 0.6rem 0;
+      color: white;
+      width: 100%;
+      background-color: black;
+      transition: all 0.2s;
+      &:hover {
+        opacity: 0.8;
+      }
+      &:active{
+        background-color: #888;
+      }
+    }
+  }
+  &__comments {
+    width: 80%;
+    margin: auto;
+    box-shadow: rgb(0 0 0 / 5%) 0px 0px 0px 1px;
+    margin-bottom: 5rem;
+    padding: 1rem 3rem;
+    & > h2 {
+      font-size: 3vmax;
+      text-align: center;
+      font-family: Catarman, "Courier New", Courier, monospace;
+    }
+    &__comment {
+      display: flex;
+      padding: 0 1rem;
+      border-bottom: 1px solid rgb(220, 219, 219);
+      align-items: center;
+      & > img {
+        width: 6vmax;
+        height: 6vmax;
+        border-radius: 100%;
+      }
+      &--details {
+        padding: 1rem;
+        width: 100%;
+        font-family: poppins;
+
+        & > h3 {
+          font-size: 1.5vmax;
+        }
+        & > p {
+          line-break: auto;
+          font-family: poppins;
+          color: #555;
+          font-size: 1.4vmax;
+        }
+        & > div {
+          font-size: 1.1vmax;
+          color: #666;
+          text-align: end;
+        }
+      }
+    }
+  }
+}

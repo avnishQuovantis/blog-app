@@ -1,0 +1,30 @@
+<div class="catagory">
+        <div class="catagory__poster" *ngIf="blogs.length!=0" routerLink="/blog/{{blogs[blogs.length-1]['id']}}">
+            <img [src]="blogs[blogs.length-1]['image']" />
+            <div class="catagory__poster__content">
+                <h2>{{blogs[blogs.length-1]['title']}} </h2>
+                <p>{{blogs[blogs.length-1]['content']|shortend:150}}.</p>
+                <span>Keep more</span>
+            </div>
+        </div>
+        <div class="catagory__blogs">
+            <div
+            class="catagory__blogs__blog"
+            *ngFor="let blog of blogs; let i = index"
+            routerLink="/blog/{{blog['id']}}"
+          >
+            <div class="catagory__blogs__blog--top">
+              <img [src]='blog["image"]'/>
+              <h2>
+                {{ blog["title"] }}
+              </h2>
+          </div>
+          <div class="catagory__blogs__blog--middle">
+              <div class="home__container__blog--middle-content">
+                  {{ blog["content"]|shortend:200 }}
+              </div>
+            
+            </div>
+            <div class="catagory__blogs__blog--bottom"></div>
+          </div>    </div>
+</div>

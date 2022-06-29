@@ -1,0 +1,42 @@
+<div class="signup">
+  <div class="signup__container">
+    <img src="https://cdni.iconscout.com/illustration/premium/thumb/user-account-sign-up-4489360-3723267.png"/>
+    <form class="signup__container__form" #signupForm="ngForm" (ngSubmit)="signupSubmit()">
+   
+      <h3>SIGNUP</h3>
+      <div class="signup__container__form__input">
+        <label for="name">
+          <i class="bi bi-badge-ad-fill"></i>        </label>
+        <input type="text" id="name" name="name" placeholder="name"  ngModel/>
+      </div>
+      <div class="signup__container__form__input">
+        <label for="username">
+          <i class="bi bi-person-circle"></i>
+        </label>
+        <input type="text" id="username" name="username" placeholder="username"  ngModel/>
+      </div>
+      <div class="signup__container__form__input">
+        <label for="email">
+          <i class="bi bi-envelope-fill"></i>        </label>
+        <input type="text" id="email" name="email" placeholder="Email"  ngModel/>
+      </div>
+      <div class="signup__container__form__input">
+        <label for="password">
+          <i class="bi bi-fingerprint"></i>        </label>
+        <input type="password" name='password'id="password" placeholder="password" ngModel/>
+      </div>
+      <div class="signup__container__form__input">
+        <label for="bio">         
+          <i class="bi bi-person-lines-fill"></i>   
+        </label>
+        <textarea row="20" name="bio" id="bio" placeholder="bio " ngModel></textarea>
+      </div>
+      <div class="signup__container__form__upload">
+        <label for="imageFile"><i class="bi bi-image"></i> Upload</label>
+        <input type="file" id="imageFile" accept="image/*" (change)="imageUpload($event)">
+      </div>
+      <button class="signup__container__form__submit" type="submit">Submit</button>
+    </form>
+  </div>
+  </div>
+  

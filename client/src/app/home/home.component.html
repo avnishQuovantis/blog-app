@@ -1,0 +1,36 @@
+<div class="home">
+  <div class="home__poster" >
+    <img [src]='blogs[blogs.length-1]["image"]' routerLink="/blog/{{blogs[blogs.length-1]['id']}}"/>
+    <div class="home__poster__content">
+      <div>{{blogs[blogs.length-1]['catagory']}}</div>
+      <h2>{{blogs[blogs.length-1]['title']}}</h2>
+      <p>{{blogs[blogs.length-1]['content']|shortend:150}}</p>
+      <span>Keep reading </span>
+    </div>
+  </div>
+  <!-- <div class="home__blogs">
+    <div
+      class="home__blogs__blog"
+      *ngFor="let blog of blogs; let i = index"
+      routerLink="/blog/{{blog['id']}}"
+    >
+      <div class="home__blogs__blog--top">
+        <img [src]='blog["image"]'/>
+        <h2>
+          {{ blog["title"] }}
+        </h2>
+    </div>
+    <div class="home__blogs__blog--middle">
+        <div class="home__blogs__blog--middle-content">
+            {{ blog["content"]|shortend:300 }}
+        </div>
+        <div class="home__container__blog--middle-author">{{ blog["username"] }}</div>
+        <div class="home__container__blog--middle-time">
+          {{ blog["created_at"] | date }}
+        </div>
+      </div>
+      <div class="home__bloga__blog--bottom"></div>
+    </div>
+  </div> -->
+  <app-blog-template [blogs]="blogs" [length]="300"></app-blog-template>
+</div>

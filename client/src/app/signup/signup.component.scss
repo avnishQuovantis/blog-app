@@ -1,0 +1,107 @@
+.signup {
+  width: 100vw;
+  min-height: 90vh;
+  background-size: cover;
+  background-color: whitesmoke;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__container {
+    width: 80%;
+    min-height: 80vh;
+    height: fit-content;
+    display: flex;
+    & > img {
+      width: 50%;
+    }
+    &__form {
+      width: 50%;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-radius: 1rem;
+      padding: 1rem;
+      font-family: "Courier New", Courier, monospace;
+      color: black;
+
+      &__upload{
+        position: relative;
+        transition: all .2s ;
+        &:hover{
+          transform: translateY(2px);
+          opacity: 0.95;
+        }
+        &>input{
+          position:absolute;
+          top:0;
+          left:0;
+          opacity: 0;
+        }
+        &>label{
+          font-size: 2.3vmax;
+          font-weight: 700;
+          font-family: Poppins;
+          padding: 0.3rem 0.6rem;
+          border-radius: 3rem;
+          background-color: white;
+          
+        }
+      }
+      & > * {
+        margin-bottom: 2rem;
+      }
+      & > img {
+        width: 10vmax;
+        height: 10vmax;
+        border-radius: 100%;
+      }
+      & > h3 {
+        font-size: 2.5vmax;
+      }
+      &__input {
+        border-bottom: 2px solid silver;
+        width: 80%;
+        & i {
+          font-size: 3vmax;
+        }
+        & input {
+          margin-left: 0.5rem;
+          padding: 0.3rem;
+          font-size: 1.8vmax;
+          border: 0;
+          color: white;
+          background-color: transparent;
+          transition: all 0.2s;
+          &:focus-visible {
+            outline: none;
+            border: 0;
+          }
+          &:focus-visible .login__container__input {
+            border-bottom: yellow;
+          }
+          &::placeholder {
+            color: whitesmoke;
+            font-size: 2vmax;
+          }
+        }
+      }
+      &__submit {
+        padding: 0.4rem 0.6rem;
+        border: none;
+        width: 44%;
+        outline: none;
+        background: #10202e;
+        border: 2px solid #e4f1ff;
+        font-size: 2vmax;
+        transition: all 0.2s;
+        color: #e4f1ff;
+        border-radius: 1rem;
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+<div class="blogs">
+
+    <div
+      class="blogs__blog"
+      *ngFor="let blog of blogs; let i = index"
+      routerLink="/blog/{{ blog['id'] }}"
+    >
+      <div class="blogs__blog--top">
+        <img [src]="blog['image']" />
+        <h2>
+          {{ blog["title"] }}
+        </h2>
+      </div>
+      <div class="blogs__blog--middle">
+        <div class="home__blogs__blog--middle-content">
+          {{ blog["content"] | shortend: length }}
+        </div>
+        <!-- <div class="home__container__blog--middle-author">{{ blog["username"] }}</div>
+            <div class="home__container__blog--middle-time">
+              {{ blog["created_at"] | date }}
+            </div> -->
+      </div>
+      <div class="blogs__blog--bottom"></div>
+    </div>
+</div>

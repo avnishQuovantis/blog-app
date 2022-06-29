@@ -1,0 +1,48 @@
+<div class="blog">
+  <div class="blog__poster">
+    <img [src]="blogs['image']" />
+    <div class="blog__poster__content">
+      <div>{{ blogs["catagory"] }}</div>
+      <h2>{{ blogs["title"] }}</h2>
+      <!-- <hr> -->
+      <span>{{ blogs["created_at"] | date }} by {{ blogs["username"] }}</span>
+    </div>
+  </div>
+  <div class="blog__content">
+    {{ blogs["content"] }}
+  </div>
+  <div class="blog__user">
+    <img
+      class="blog__user__image"
+      src="http://localhost:8080/profile/image/{{ blogs['userimage'] }}"
+    />
+    <div class="blog__user__details">
+      <span> Written By </span>
+      <h2 class="blog__user__details__username">
+        {{ blogs["name"] }}
+      </h2>
+      <p>{{ blogs["bio"] }}</p>
+    </div>
+  </div>
+  <div class="blog__comments">
+    <h2>Comments</h2>
+    <div
+      class="blog__comments__comment"
+      *ngFor="let comment of comments; let i = index"
+    >
+      <img src="http://localhost:8080/profile/image/{{ comment['image'] }}" />
+      <div class="blog__comments__comment--details">
+        <h3>{{comment['username']}}</h3>
+        <p>
+          {{ comment["comment_text"] }}
+        </p>
+        <div>{{comment['created_at']|date}}</div>
+      </div>
+    </div>
+  </div>
+  <div class="blog__addComment">
+    <h2 >Leave Comment </h2>
+    <textarea row="5" placeholder="Add comment" [(ngModel)]="comment" ></textarea>
+        <button class="btn" [disabled]="user==null" (click)="createComment()">COMMENT</button>
+  </div>
+</div>

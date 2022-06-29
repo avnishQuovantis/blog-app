@@ -1,0 +1,99 @@
+.login {
+  width: 100vw;
+  height: 85vh;
+  background-size: cover;
+  background-color: whitesmoke;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__container {
+    width: 70%;
+    min-height: 70vh;
+    height: fit-content;
+    display: flex;
+    & > img {
+      width: 50%;
+      // height: 100%;
+    }
+    &__form {
+      width: 50%;
+      // height: 100%;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      // border-radius: 1rem;
+      padding: 1rem;
+      font-family:"Poppins", "Courier New", Courier, monospace;
+      color: black;
+      & > * {
+        margin-bottom: 2rem;
+      }
+      & > img {
+        width: 10vmax;
+        height: 10vmax;
+        border-radius: 100%;
+      }
+      & > h3 {
+        font-size: 2.5vmax;
+        letter-spacing: 2px;
+        font-family: "Roboto";
+        font-weight:400;
+      }
+      &__input {
+        border-bottom: 2px solid silver;
+        width: 80%;
+        & i {
+          font-size: 2vmax;
+        }
+        & input {
+          margin-left: 0.5rem;
+          padding: 0.3rem;
+          font-size: 1.4vmax;
+          border: 0;
+          color: black;
+          background-color: transparent;
+          transition: all 0.2s;
+          &:focus-visible {
+            outline: none;
+            border: 0;
+          }
+          &:focus-visible .login__container__input {
+            border-bottom: yellow;
+          }
+          &::placeholder {
+            color: white;
+            color: #555;
+            font-size: 1.4vmax;
+          }
+        }
+      }
+      &__submit,&__signup{
+
+        padding: 0.4rem 0.6rem;
+        border: none;
+        // width: 44%;
+        outline: none;
+        font-size: 1.5vmax;
+        transition: all 0.2s;
+      border-radius: 0.3rem;
+        color: white;
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+      &__submit {
+        background: #10202e;
+      
+      }
+      &__signup {
+        background-color: blue;
+      }
+      &>hr{
+        width:50%;
+        background-color:silver
+      }
+    }
+  }
+}

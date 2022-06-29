@@ -1,0 +1,36 @@
+<div class="createBlog">
+    <div class="createBlog__container">
+        <h2>Create Blog</h2>
+        <span *ngIf="error!=''">{{error}}</span>
+        <img [src]="previewImage" *ngIf="file!=null ||imageUrl!=''"/>
+
+        <div class="createBlog__container__content">
+            <input type="text" [(ngModel)]="title" placeholder="Title"  />
+        </div>
+        <div class="createBlog__container__content">
+            <textarea type="text" rows="10"  cols='10' [(ngModel)]='content' placeholder="enter blog content here"></textarea>        </div>
+        <div class="createBlog__container__content">
+           <select [(ngModel)]="catagory">
+            <option  selected>select country</option>
+            <option value="lifestyle">lifestyle</option>
+            <option value="travel">travel</option>
+            <option value="food" >food</option>
+            <option value="fitness">Health and fitness </option>
+            <option value="technology" > Technlogy</option>
+            <option value="personal">Personal</option>
+            <option value="sports">sports</option>
+           </select>
+        </div>
+        <div class="createBlog__container__content" *ngIf='file==null'>
+            <input type="text" (input)="changeImageUrl($event)"  placeholder="enter image url"/>
+        </div>
+        <span *ngIf="file==null &&imageUrl==''"> OR</span>
+        <div class="createBlog__container__content" *ngIf="imageUrl==''">
+            <input type="file" (change)="openImage($event)"/>
+        </div>
+        <button (click)="submitBlog()" class="createBlog__container__submitBtn"> submit</button>
+    </div>
+
+
+
+</div>

@@ -1,0 +1,90 @@
+.heading {
+  background-color: white;
+  // width: 100vw;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-family: "Poppins";
+  padding: 1rem;
+  align-items: center;
+
+ 
+  & > a {
+    padding: 0.3rem 0.4rem;
+    font-size: 1.2vmax;
+    text-decoration: none;
+    font-family:"Roboto",'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    // color: #888;
+    color:#222;
+    letter-spacing: 2px;
+    border-radius: 1.5rem;
+    text-transform: uppercase;
+    transition:all .2s ease-in-out;
+  }
+&__search{
+  
+  height: 100%;
+  border-radius: 1rem;
+  // bordeR:1px solid silver;/
+  display: flex;
+  
+  &>input{
+    // width: 2vmax;
+    width: 5vw;
+    transition: all .2s;
+    border:1px solid silver;
+    &:focus-visible{
+      width: 15vw;
+      outline:none;
+    }
+  }
+  &>button{
+    font-size: 1.3vmax;
+    outline: none;
+    border: 1px solid dodgerblue;
+    background-color: dodgerblue;
+    color: white;
+    padding: 0.2rem;
+  }
+ 
+  
+
+ 
+}
+
+  &__title {
+    font-size: 2.2vmax !important;
+    padding: 0.3rem 0.6rem;
+    text-decoration: none;
+    // color: #888;
+    color:black;
+    border-radius: 1.5rem;
+    transition:all .2s ease-in-out;
+  }
+
+  &__login {
+    color: black;
+    padding: 0.2rem 0.4rem;
+    font-size: 1.3vmax;
+  font-family: "Roboto",'Courier New', Courier, monospace;
+    border-radius: 0.3rem;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    position: relative;
+    &>img{
+      border-radius: 100%;
+      width: 3vmax;
+      margin-right: 0.5rem;
+    }
+
+  }
+
+
+}
+.active {
+  color: white !important;
+  background: #b6b6b6cf !important;
+}
+

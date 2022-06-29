@@ -1,0 +1,20 @@
+<div class="profile">
+    <img src="https://img.freepik.com/free-photo/top-view-background-beautiful-white-grey-brown-cream-blue-background_140725-72219.jpg?w=2000" alt="">
+    <div class="profile__container">
+        <img src="http://localhost:8080/profile/image/{{user['image']}}" alt="">
+        <h4 class="profile__container__name">
+            {{user['name']}}
+        </h4>
+        <div class="profile__container__bio">
+            
+            {{user['bio']}}
+        </div>
+        <div class="profile__container__details">
+            <h4>username</h4><span>{{user['username']}}</span> 
+        </div>
+        <div class="profile__container__details">
+            <h4>EMAIL</h4><span>{{user['email']}}</span> 
+        </div>
+
+    </div>
+</div>

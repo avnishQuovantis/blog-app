@@ -1,0 +1,26 @@
+<nav class="heading">
+        <div class="heading__title"  routerLink="/">BLOG</div>
+        <a class="heading__tabs" routerLink="/catagory/lifestyle"  routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">lifestyle</a>
+        <a class="heading__tabs" routerLink="/catagory/fitness"  routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">fitness</a>
+        <a class="heading__tabs" routerLink="/catagory/food"  routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Food</a>
+        <a class="heading__tabs" routerLink="/catagory/technology"  routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">technology</a>
+        <a class="heading__tabs" routerLink="/catagory/travel"  routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">travel</a>
+        <a class="heading__tabs" routerLink="/catagory/personal"  routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">personal</a>
+        <!-- <a class="heading__tabs" routerLink="/create-blog">+</a> -->
+       
+        <!-- <a class="heading__login" routerLink="/login" *ngIf="user==null">login</a> -->
+        <!-- <a class="" -->
+        <div class="heading__search">
+                <input type="text" placeholder="search" [(ngModel)]="searchInput"/>
+                <button class='btn'><i class="bi bi-search"(click)="search()"></i></button>
+                
+        </div>
+        <div routerLink="/login" class="heading__login" *ngIf="user==null"> <img src="https://images.assetsdelivery.com/compings_v2/90miles/90miles2005/90miles200500021.jpg"/> <span>login</span></div>
+        
+        <div  class="heading__login" *ngIf="user" (click)="clickDropDown()">
+                 <img src="http://localhost:8080/profile/image/{{user['image']}}"/> <span>{{user['username']}}</span>
+                <app-dropdown [dropDown]="dropDownBtn"></app-dropdown>
+        </div>
+        <!-- <a class="heading__signup" routerLink="/signup">signup</a> -->
+    
+</nav>

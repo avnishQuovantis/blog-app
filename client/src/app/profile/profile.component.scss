@@ -1,0 +1,64 @@
+.profile {
+  width: 100%;
+  min-height: 90vh;
+  position: relative;
+  // padding:3rem ;/
+  & > img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: -100;
+    width: 100%;
+    height: 60vh;
+    clip-path: ellipse(100% 86% at 5% 10%);
+  }
+  &__container {
+    width: 50%;
+    height: 100%;
+    margin: auto;
+    background-color: transparent;
+    display: flex;
+    position: relative;
+    top: 16vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins", "Courier New", Courier, monospace;
+    & > * {
+      margin-bottom: 1rem;
+    }
+    & > img {
+     max-width: 20rem;
+      width: 21vmax;
+      // top: -7rem;
+      margin: auto;
+      position: relative;
+      border-radius: 100%;
+      display: block;
+    }
+    &__name {
+      font-size: 2.3vmax;
+        color:#222;
+    }
+    &__bio {
+      line-break: auto;
+      font-size: 1.4vmax;
+      font-family: cursive;
+      color: #333;
+    }
+    &__details{
+        display: flex;
+        font-size: 1.5vmax;
+        &>*{
+            padding:0 0.3rem;
+
+        }
+        &>h4{
+            font-weight: 500;
+            color:#222
+        }&{
+            color: darkslategray;
+        }
+    }
+  }
+}
